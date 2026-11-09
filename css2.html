@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: pink;
+            display: flex;
+            justify-content: space-around;  
+        }
+        .card{
+            border: 2px solid black;
+            width: 30%;
+            background-color: white;
+            border-radius:30px;
+            overflow: hidden;
+        }
+        .card-header img{
+            width: 100%;
+        }
+        .card-body{
+            text-align: center;
+            padding: 0 20px 20px 20px;
+        }
+        .card-footer{
+            background-color:powderblue;
+            display: flex;
+            justify-content: space-evenly;
+            color:beige;
+            padding: 10px;
+        }
+        .card-footer div{
+            text-align: center;
+        }
+        @media( max-width:800px ){
+            body{
+                background-color: black;
+            }
+            .card{
+                width: 95%;
+            }
+        }
+        @media( min-width:768px ){
+            body{
+                background-color: bisque;
+            }
+            .card{
+                width: 50%;
+            }
+        }
+        @media(max-width:500px){
+            .card{
+            width: 95% ;
+        }
+
+        }
+        .body-content{
+            margin-top: 10px;
+        }
+        .card{
+            width: 30%;
+            background-color: white;
+        }
+        .card-header img{
+            width: 100%;
+        }
+        .card-body{
+            text-align: center;
+            padding: 0 20px 20px 20px;
+            border-radius:30px;
+            overflow: hidden;
+        }
+        .body-content{
+            margin-top: 10px;
+        }
+        .card{
+            width: 30%;
+            background-color: white;
+        }
+        .card-header img{
+            width: 100%;
+        }
+        .card-body{
+            text-align: center;
+            padding: 0 20px 20px 20px;
+            border-radius:30px;
+            overflow: hidden;
+        }
+        .body-content{
+            margin-top: 10px;
+        }
+        .cards-layout{
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-around;
+            align-items: center;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <div class="cards-layout">
+    <div class="card">
+        <div class="card-header">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.7IoVMwvos0H2ywcVOB1XZgHaEn?r=0&pid=Api&h=220&P=0" alt="">
+        </div>
+        <div class="card-body">
+            <h5 class="body-content">4 days ago</h5>
+            <h3 class="body-content">Post One</h3>
+            <p class="body-content"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, dolores facilis! Ab eaque quam labore blanditiis veniam, iusto incidunt at esse ex repellat eum aliquam, sit veritatis, nemo praesentium similique!</p>
+        </div>
+        <div class="card-footer">
+            <div class="reads">
+                <h4>4 <sup>m</sup> </h4>
+                <h3> reads</h3>
+            </div>
+            <div class="views">
+                <h4>5213</h4>
+                <h3>views</h3>
+            </div>
+            <div class="comments">
+                <h4>32</h4>
+                <h3>comments</h3>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.7IoVMwvos0H2ywcVOB1XZgHaEn?r=0&pid=Api&h=220&P=0" alt="">
+        </div>
+        <div class="card-body">
+            <h5 class="body-content">4 days ago</h5>
+            <h3 class="body-content">Post One</h3>
+            <p class="body-content"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, dolores facilis! Ab eaque quam labore blanditiis veniam, iusto incidunt at esse ex repellat eum aliquam, sit veritatis, nemo praesentium similique!</p>
+        </div>
+        <div class="card-footer">
+            <div class="reads">
+                <h4>4 <sup>m</sup> </h4>
+                <h3> reads</h3>
+            </div>
+            <div class="views">
+                <h4>5213</h4>
+                <h3>views</h3>
+            </div>
+            <div class="comments">
+                <h4>32</h4>
+                <h3>comments</h3>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.7IoVMwvos0H2ywcVOB1XZgHaEn?r=0&pid=Api&h=220&P=0" alt="">
+        </div>
+        <div class="card-body">
+            <h5 class="body-content">4 days ago</h5>
+            <h3 class="body-content">Post One</h3>
+            <p class="body-content"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, dolores facilis! Ab eaque quam labore blanditiis veniam, iusto incidunt at esse ex repellat eum aliquam, sit veritatis, nemo praesentium similique!</p>
+        </div>
+        <div class="card-footer">
+            <div class="reads">
+                <h4>4 <sup>m</sup> </h4>
+                <h3> reads</h3>
+            </div>
+            <div class="views">
+                <h4>5213</h4>
+                <h3>views</h3>
+            </div>
+            <div class="comments">
+                <h4>32</h4>
+                <h3>comments</h3>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.7IoVMwvos0H2ywcVOB1XZgHaEn?r=0&pid=Api&h=220&P=0" alt="">
+        </div>
+        <div class="card-body">
+            <h5 class="body-content">4 days ago</h5>
+            <h3 class="body-content">Post One</h3>
+            <p class="body-content"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, dolores facilis! Ab eaque quam labore blanditiis veniam, iusto incidunt at esse ex repellat eum aliquam, sit veritatis, nemo praesentium similique!</p>
+        </div>
+        <div class="card-footer">
+            <div class="reads">
+                <h4>4 <sup>m</sup> </h4>
+                <h3> reads</h3>
+            </div>
+            <div class="views">
+                <h4>5213</h4>
+                <h3>views</h3>
+            </div>
+            <div class="comments">
+                <h4>32</h4>
+                <h3>comments</h3>
+            </div>
+    </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.7IoVMwvos0H2ywcVOB1XZgHaEn?r=0&pid=Api&h=220&P=0" alt="">
+        </div>
+        <div class="card-body">
+            <h5 class="body-content">4 days ago</h5>
+            <h3 class="body-content">Post One</h3>
+            <p class="body-content"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, dolores facilis! Ab eaque quam labore blanditiis veniam, iusto incidunt at esse ex repellat eum aliquam, sit veritatis, nemo praesentium similique!</p>
+        </div>
+        <div class="card-footer">
+            <div class="reads">
+                <h4>4 <sup>m</sup> </h4>
+                <h3> reads</h3>
+            </div>
+            <div class="views">
+                <h4>5213</h4>
+                <h3>views</h3>
+            </div>
+            <div class="comments">
+                <h4>32</h4>
+                <h3>comments</h3>
+            </div>
+    </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.7IoVMwvos0H2ywcVOB1XZgHaEn?r=0&pid=Api&h=220&P=0" alt="">
+        </div>
+        <div class="card-body">
+            <h5 class="body-content">4 days ago</h5>
+            <h3 class="body-content">Post One</h3>
+            <p class="body-content"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, dolores facilis! Ab eaque quam labore blanditiis veniam, iusto incidunt at esse ex repellat eum aliquam, sit veritatis, nemo praesentium similique!</p>
+        </div>
+        <div class="card-footer">
+            <div class="reads">
+                <h4>4 <sup>m</sup> </h4>
+                <h3> reads</h3>
+            </div>
+            <div class="views">
+                <h4>5213</h4>
+                <h3>views</h3>
+            </div>
+            <div class="comments">
+                <h4>32</h4>
+                <h3>comments</h3>
+            </div>
+        </div>
+    </div>
+    </div>   
+</body>
+</html>

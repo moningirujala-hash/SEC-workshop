@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head">Heading</h1>
+    <input type="text" id="inp">
+    <input type="text" name="" id="inp2">
+    <button onclick="changetext()">change</button>
+    <h3 class="heading">heading1</h3>
+    <h3 class="heading">heading2</h3>
+    <h3 class="heading">heading3</h3>
+    <script>
+        var heads =document.getElementsByClassName("heading");
+        console.log(heads);
+        function changetext(){
+        var ele = document.getElementById("head");
+        console.log(ele);
+        //ele.innerText="Welcome to JS"
+        var inp =document.getElementById("inp").value;
+        var inp2 =document.getElementById("inp2").value;
+        console.log(inp);
+        ele.innerText=inp+""+inp2;
+        }        
+    </script>
+</body>
+</html>

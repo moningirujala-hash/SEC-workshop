@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <style>
+        body{
+            background-color: darkkhaki;
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Login Form</h2>
+
+    Username:
+    <input type="text" id="username">
+
+    <br><br>
+
+    Password:
+    <input type="password" id="password">
+
+    <br><br>
+
+    <button onclick="showData()">Login</button>
+
+    <h3>Entered Data:</h3>
+
+    <p id="result"></p>
+
+    <script>
+        function showData() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            document.getElementById("result").innerHTML =
+                "Username: " + username + "<br>" +
+                "Password: " + password;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 4 CSS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+        background-color: antiquewhite;
+        }
+        .card{
+            border: 2px solid white;
+            background-color: white;
+            border-radius:15px;
+            width: 30%;
+            margin:20px;
+            border-radius:15px;
+        }
+        .card-body{
+            padding: 0 15px 15px 15px;
+            text-align:left;
+        }
+        .card-footer{
+            padding: 25px 0 0 0;
+            display:flex;
+            justify-content:space-around;
+            align-items:center;
+                    }
+        .cards-layout {
+            height: 25vh;
+            display:flex;
+            flex-wrap: wrap;
+            justify-content:space-evenly;
+            align-items:center;
+        }
+        .card-header img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        @media( max-width:800px ){
+            body{
+                background-color: black;
+            }
+            .card{
+                width: 30%;
+            }
+        }
+        @media( min-width:768px ){
+            body{
+                background-color: bisque;
+            }
+            .card{
+                width: 30%;
+            }
+        }
+        @media(max-width:500px){
+            .card{
+            width: 95% ;}
+        }
+    </style>
+</head>
+<body>
+    <div class="cards-layout">    
+        <div class="card">
+        <div class="card-header">
+        <img src="https://clipartcraft.com/images/amazon-logo-transparent-circle.png" >
+        </div>
+        <div class="card-body">
+            <h4> <b> Amazon </b> 5 days ago </h4>
+            <h3> Senior UI/UX Designer </h3>
+            <input  type="button" value="Part-time">
+            <input  type="button" value="Senior level">
+        </div>
+        <div class="card-footer">
+            <h4> $120/hr <br> SanFrancisco,CA</h4>
+            <input  type="button" value="Apply now">
+        </div>
+        </div>
+        <div class="card">
+        <div class="card-header"><img src="https://tse4.mm.bing.net/th/id/OIP.scm4bV9zeOqbe6lzOefkaAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"></div>
+        <div class="card-body">
+            <h4> <b> google </b> 5 days ago </h4>
+            <h3> Senior UI/UX Designer </h3>
+            <input  type="button" value="Part-time">
+            <input  type="button" value="Senior level">
+        </div>
+        <div class="card-footer">
+             <h4> $120/hr <br> SanFrancisco,CA</h4>
+            <input  type="button" value="Apply now">
+        </div>
+        </div>
+        <div class="card">
+        <div class="card-header"> <img src="https://static.vecteezy.com/system/resources/previews/012/660/867/original/dribbble-logo-on-transparent-isolated-background-free-vector.jpg"></div>
+        <div class="card-body">
+            <h4> <b> Dribble </b> 5 days ago </h4>
+            <h3> Senior UI/UX Designer </h3>
+            <input  type="button" value="Part-time">
+            <input  type="button" value="Senior level">
+        </div>
+        <div class="card-footer">
+             <h4> $120/hr <br> SanFrancisco,CA</h4>
+            <input  type="button" value="Apply now">
+        </div>
+        </div>  
+        <div class="card">
+        <div class="card-header"> <img src="https://pngimg.com/uploads/meta/meta_PNG4.png"></div>
+        <div class="card-body">
+            <h4> <b> Meta </b> 5 days ago </h4>
+            <h3> Senior UI/UX Designer </h3>
+            <input  type="button" value="Part-time">
+            <input  type="button" value="Senior level">
+        </div>
+        <div class="card-footer">
+            <h4> $120/hr <br> SanFrancisco,CA</h4>
+            <input  type="button" value="Apply now">
+        </div>
+        </div>
+        <div class="card">
+        <div class="card-header"> <img src="https://tse3.mm.bing.net/th/id/OIP.gYKu9WKsZuoIHu2CZ6J-0AHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3https://tse4.mm.bing.net/th/id/OIP.scm4bV9zeOqbe6lzOefkaAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"></div>
+        <div class="card-body">
+            <h4> <b> Airbnb </b> 5 days ago </h4>
+            <h3> Senior UI/UX Designer </h3>
+            <input  type="button" value="Part-time">
+            <input  type="button" value="Senior level">
+        </div>
+        <div class="card-footer">
+             <h4> $120/hr <br> SanFrancisco,CA</h4>
+            <input  type="button" value="Apply now">
+        </div>
+        </div>
+        <div class="card">
+        <div class="card-header"> <img src="https://tse3.mm.bing.net/th/id/OIP.tR0vupBXA0a_1MIlZ1xHpwHaG1?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"></div>
+        <div class="card-body">
+            <h4> <b> Apple </b> 5 days ago </h4>
+            <h3> Senior UI/UX Designer </h3>
+            <input  type="button" value="Part-time">
+            <input  type="button" value="Senior level">
+        </div>
+        <div class="card-footer">
+            <h4> $120/hr <br> SanFrancisco,CA</h4>
+            <input  type="button" value="Apply now">
+        </div>
+        </div>
+    </div>
+</body>
+</html>

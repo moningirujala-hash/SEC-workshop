@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        var ele = document.createElement("h1");
+        ele.setAttribute("class","heading");
+        /*css using js*/
+        ele.style.backgroundColor="aqua";
+        ele.style.color="blueviolet";
+        ele.innerText ="Created an element";
+        var div=document.getElementById("demo");
+        div.appendChild(ele);
+        var para = document.createElement("p");
+        para.innerText="This is a paragraph element";
+        div.appendChild(para);
+        var order=document.createElement("ol");
+        order.setAttribute("type","a");
+        var item1=document.createElement("li");
+        var item2=document.createElement("li");
+        var item3=document.createElement("li");
+        var item4=document.createElement("li");
+        var item5=document.createElement("li");
+        item1.innerText="This is the list item 1";
+        item2.innerText="This is the list item 2";
+        item3.innerText="This is the list item 3";
+        item4.innerText="This is the list item 4";
+        item5.innerText="This is the list item 5";
+        order.appendChild(item1);
+        order.appendChild(item2);
+        order.appendChild(item3);
+        order.appendChild(item4);
+        order.appendChild(item5);
+        div.appendChild(order);
+        /*html using js*/
+        /*object*/
+        var student={
+            id:512,
+            name:'rujala',
+            branch:'Data Science',
+            role:'student',
+        }
+        console.log(student.id);
+        var card =`
+        <div class="card">
+            <h1>student id:${student.id}</h1>
+            <h1>student name:${student.name}</h1>
+            <h1>student branch:${student.branch}</h1>
+            <h1>student role:${student.role}</h1>
+        </div>    
+        `;
+        div.innerHTML+=card;
+        var students=[ {
+    "id": 1,
+    "name": "Ravi",
+    "age": 20,
+    "course": "B.Tech",
+    "branch": "CSE",
+    "marks": 85
+    },
+    {
+    "id": 2,
+    "name": "Sita",
+    "age": 21,
+    "course": "B.Tech",
+    "branch": "ECE",
+    "marks": 90
+    },
+    {
+    "id": 3,
+    "name": "Kiran",
+    "age": 20,
+    "course": "B.Tech",
+    "branch": "IT",
+    "marks": 78
+    },
+    {
+    "id": 4,
+    "name": "Priya",
+    "age": 21,
+    "course": "B.Tech",
+    "branch": "CSE",
+    "marks": 92
+    },
+    {
+    "id": 5,
+    "name": "Arjun",
+    "age": 20,
+    "course": "B.Tech",
+    "branch": "EEE",
+    "marks": 76
+    },
+    {
+    "id": 6,
+    "name": "Anjali",
+    "age": 22,
+    "course": "B.Tech",
+    "branch": "CSE",
+    "marks": 88
+    },
+    {
+    "id": 7,
+    "name": "Vijay",
+    "age": 21,
+    "course": "B.Tech",
+    "branch": "MECH",
+    "marks": 81
+    },
+    {
+    "id": 8,
+    "name": "Sneha",
+    "age": 20,
+    "course": "B.Tech",
+    "branch": "IT",
+    "marks": 95
+    },
+    {
+    "id": 9,
+    "name": "Rahul",
+    "age": 22,
+    "course": "B.Tech",
+    "branch": "ECE",
+    "marks": 73
+    },
+    {
+    "id": 10,
+    "name": "Pooja",
+    "age": 21,
+    "course": "B.Tech",
+    "branch": "CSE",
+    "marks": 89
+    }
+        ]
+        students.style.backgroundColor="black";
+        students.style.color="white";
+        console.log(students);
+        //for(var i=0;i<students.length;i++){
+            //var stdcard =`
+                //<div class="card">
+                    //<h3>${students[i].id}</h3> 
+                   // <h3>${students[i].name}</h3>
+                    //<h3>${students[i].age}</h3>
+                   // <h3>${students[i].course}</h3>
+                   // <h3>${students[i].branch}</h3>
+                   // <h3>${students[i].marks}</h3>
+                //</di//v>
+           // `;
+            //div.innerHTML+=stdcard;
+        //}
+        students.forEach((student)=>){
+        var stdcard =`
+                <div class="card">
+                    <h3>${students[i].id}</h3> 
+                    <h3>${students[i].name}</h3>
+                </div>
+            `;
+            div.innerHTML+=stdcard;
+        }
+    </script>
+</body>
+</html>

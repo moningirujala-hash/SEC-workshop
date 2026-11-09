@@ -1,0 +1,31 @@
+        h1{
+            background-color: aqua; color :floralwhite;
+            border: 2px solid black;
+                padding: 3px;
+                margin-top: 3px;
+                margin-bottom: 3px;
+                margin-left: 3px;
+                margin-right: 3px;
+                height: 50px;
+                width: 500px;
+        }
+        #heading{
+            background-color: aquamarine;color: black
+            color: rgba(0, 128, 200, 0.8);
+        }
+        *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+        }
+        .list {background-color: blue;
+            color:rgb(169, 0, 0);
+            text-align: center;
+            font-size: 40px;
+            font-family: "Roboto", sans-serif;
+
+        }
+        /* Group selector*/
+        h4,h5,.para{
+            background-color: blueviolet;
+        }               

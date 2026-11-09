@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+    <style>
+        body{
+            background-color: coral;
+            color: cornsilk;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Simple Calculator</h2>
+
+    <label>Input 1:</label>
+    <input type="number" id="input1">
+
+    <br><br>
+
+    <label>Input 2:</label>
+    <input type="number" id="input2">
+
+    <br><br>
+
+    <button onclick="add()">+</button>
+    <button onclick="subtract()">-</button>
+    <button onclick="multiply()">x</button>
+    <button onclick="divide()">%</button>
+
+    <h3 id="answer">Answer will be displayed here</h3>
+
+    <script>
+
+        function add() {
+            let num1 = Number(document.getElementById("input1").value);
+            let num2 = Number(document.getElementById("input2").value);
+
+            let result = num1 + num2;
+
+            document.getElementById("answer").innerText = "Answer: " + result;
+        }
+
+        function subtract() {
+            let num1 = Number(document.getElementById("input1").value);
+            let num2 = Number(document.getElementById("input2").value);
+
+            let result = num1 - num2;
+
+            document.getElementById("answer").innerText = "Answer: " + result;
+        }
+
+        function multiply() {
+            let num1 = Number(document.getElementById("input1").value);
+            let num2 = Number(document.getElementById("input2").value);
+
+            let result = num1 * num2;
+
+            document.getElementById("answer").innerText = "Answer: " + result;
+        }
+
+        function divide() {
+            let num1 = Number(document.getElementById("input1").value);
+            let num2 = Number(document.getElementById("input2").value);
+
+            let result = num1 / num2;
+
+            document.getElementById("answer").innerText = "Answer: " + result;
+        }
+
+    </script>
+
+</body>
+</html>

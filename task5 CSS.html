@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Homepage Design</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 30px;
+            background-color:lavender;
+            font-family:arial;
+        }
+
+        h1 {
+            font-size: 35px;
+        }
+
+        .board .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .board .card{
+            width: 20%;
+        }
+
+        .span{
+            font-size: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 150px;
+            
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+        }
+
+        .tag {
+            background-color: plum;
+            padding: 8px;
+            border-radius: 15px;          
+        }
+
+        .blue {
+            background-color: lightblue;
+        }
+
+        .green {
+            background-color: lightgreen;
+        }
+
+        .card p {
+            font-size: 17px;
+            line-height: 1.5;
+        }
+
+        .details{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .circle {
+            width: 35px;
+            height: 35px;
+            background-color: purple;
+            border-radius: 50%;
+        }
+        @media( max-width:800px ){
+            body{
+                background-color: black;
+            }
+            .card{
+                width: 50%;
+            }
+        }
+        @media( min-width:768px ){
+            body{
+                background-color: bisque;
+            }
+            .card{
+                width: 20%;
+            }
+        }
+        @media(max-width:500px){
+            .card{
+            width: 95% ;
+        }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Homepage Design</h1>
+    <div class="board">
+    <div class="span">
+    <h3>Task Ready</h3>
+    <h3>In process</h3>
+    <h3>Needs review</h3>
+    <h3>Done</h3>
+        </div> 
+        <div class="row"> 
+        <div class="card">
+    <span class="tag">Copywriting</span>
+    <p>Konsep hero title yang menarik</p>
+    <div class="details">
+    <span>nov24</span>
+    <span>3</span>
+    <span>7</span>
+    <div class="circle"></div>
+    </div>
+        </div>
+
+        <div class="card">
+    <span class="tag blue">UI Design</span>
+    <p>Icon di section our services</p>
+    <div class="details">
+    <span>nov 24</span>
+    <span>3</span>
+    <span>7</span>
+    <div class="circle"></div>
+    </div>
+        </div>             
+        <div class="card">
+        <span class="tag blue">UI Design</span>
+        <p>Replace lorem ipsum text in the final designs</p>
+       <div class="details">
+         <span >nov 24 </span>
+         <span>5</span>
+         <span>5</span>
+         <div class="circle"></div>
+        </div>
+        </div>
+
+        <div class="card">
+            <span class="tag green">Illustration</span>
+            <p>Create and generate the custom SVG illustrations.</p>
+            <div class="details">
+            <snap>nov24</snap>
+            <span>4</span>
+            <span>0</span>
+            <div class="circle"></div>
+           </div>
+        </div>       
+        </div> 
+        <div class="row">
+        <div class="card">
+        <span class="tag">Copywriting</span>
+        <p>Check the company we copied doesn't think we copied them.</p>
+        <div class="details">
+         <snap>nov24</snap>
+        <span>12</span>
+        <span>5</span>
+        <div class="circle"></div>
+        </div>
+        </div>
+        <div class="card">
+        <span class="tag blue">UI Design</span>
+        <p>Design the about page.</p>
+        <div class="details">
+        <span>nov24</span>
+        <span>2</span>
+        <span>5</span>
+        <div class="circle"></div>
+        </div>
+        </div>              
+        <div class="card">
+         <span class="tag green">Illustration</span>
+         <p>Send Advert illustrations over to production company.</p>
+         <div class="details">
+         <span>nov24</span>
+         <span>8</span>
+         <span>7</span>
+         <div class="circle"></div>
+         </div>
+        </div>
+        <div class="card">
+            <span class="tag green">Illustration</span>
+            <p>Dawn wants to move the text 3px to the right.</p>
+             <div class="details">
+             <span>n0v24</span>
+            <span>3</span>
+             <span>7</span>
+             <div class="circle"></div>
+            </div>
+        </div> 
+        </div>       
+    </div>
+
+</body>
+</html>

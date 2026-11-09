@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Landing Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #243e63;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            width: 100%;
+            padding: 25px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #243e63;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #243e63;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #6415ff;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .login {
+            text-decoration: none;
+            color: #243e63;
+            font-weight: bold;
+        }
+
+        .signup {
+            text-decoration: none;
+            background-color: #6415ff;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 600px;
+            padding: 70px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .hero-text {
+            width: 48%;
+        }
+
+        .hero-text h1 {
+            font-size: 55px;
+            line-height: 1.15;
+            color: #243e63;
+            margin-bottom: 25px;
+        }
+        .hero-text h5 {
+            font-size: 30px;
+            color: grey;
+            margin-bottom: 10px;
+        }
+
+        .hero-text h1 span {
+            color: #6415ff;
+        }
+
+        .hero-text p {
+            color: #526581;
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #6415ff;
+            color: white;
+            padding: 16px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .hero-image {
+            width: 48%;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* FEATURES */
+        .features {
+            padding: 80px 8%;
+            text-align: center;
+            background-color: #f7f8fa;
+        }
+
+        .section-title {
+            font-size: 38px;
+            margin-bottom: 15px;
+            color: #243e63;
+        }
+
+        .section-subtitle {
+            color: #718096;
+            font-size: 17px;
+            margin-bottom: 50px;
+        }
+
+        .feature-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: white;
+            padding: 35px 25px;
+            border-radius: 8px;
+            flex: 1;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: #243e63;
+        }
+
+        .feature-card p {
+            color: #718096;
+            line-height: 1.6;
+        }
+
+        /* MENU */
+        .menu {
+            padding: 90px 8%;
+            text-align: center;
+        }
+
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 25px;
+        }
+        .category-title h1 {
+            display: block;
+        font-size: 30px;
+        color: #243e63;
+        margin-bottom: 25px;
+        display: flex;
+
+        }
+
+        .food-card {
+            text-align: center;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            overflow: hidden;
+            background: white;
+            text-align: left;
+            width: 30%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .food-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .food-info {
+            padding: 22px;
+        }
+
+        .food-info h3 {
+            margin-bottom: 10px;
+        }
+
+        .food-info p {
+            color: #718096;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            color: #6415ff;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* ABOUT */
+        .about {
+            padding: 90px 8%;
+            background-color: #f7f8fa;
+            display: flex;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .about-image {
+            width: 48%;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .about-text {
+            width: 52%;
+        }
+
+        .about-text h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #718096;
+            line-height: 1.8;
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
+
+        .about-btn {
+            display: inline-block;
+            padding: 14px 25px;
+            background-color: #6415ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* TESTIMONIAL */
+        .testimonial {
+            padding: 90px 8%;
+            text-align: center;
+        }
+
+        .testimonial-box {
+            max-width: 750px;
+            margin: auto;
+            padding: 40px;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+        }
+
+        .testimonial-box p {
+            color: #526581;
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .customer {
+            font-weight: bold;
+            color: #243e63;
+        }
+
+        /* CTA */
+        .cta {
+            margin: 50px 8%;
+            padding: 60px;
+            background-color: #6415ff;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            margin-bottom: 25px;
+            font-size: 17px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: white;
+            color: #6415ff;
+            padding: 14px 28px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 80px;
+            background-color: #243e63;
+            color: white;
+            padding: 60px 8% 25px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .footer-column {
+            flex: 1;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+        }
+
+        .footer-column p,
+        .footer-column a {
+            color: #cbd5e1;
+            line-height: 2;
+            text-decoration: none;
+            display: block;
+        }
+
+        .copyright {
+            border-top: 1px solid #526581;
+            margin-top: 40px;
+            padding-top: 20px;
+            text-align: center;
+            color: #cbd5e1;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text,
+            .hero-image {
+                width: 100%;
+            }
+
+            .hero-text h1 {
+                font-size: 42px;
+            }
+
+            .feature-container 
+            .menu-container {
+                flex-direction: column;
+            }
+
+            .about {
+                flex-direction: column;
+            }
+
+            .about-image,
+            .about-text {
+                width: 100%;
+            }
+
+            .footer-container {
+                flex-direction: column;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            🍽️ TastyBite
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="nav-buttons">
+            <a href="#" class="login">Log in</a>
+            <a href="#" class="signup">Sign Up</a>
+        </div>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <div class="hero">
+
+        <div class="hero-text">
+
+            <h1>
+                Delicious food,
+                <span>made with love.</span>
+            </h1>
+
+            <p>
+                Experience delicious meals prepared with fresh ingredients
+                and served with passion. Discover your new favorite dishes
+                at our restaurant.
+            </p>
+
+            <a href="#" class="hero-btn">
+                Order Now
+            </a>
+            <a href="#" class="hero-btn">
+                View our chefs
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+            <img
+                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
+                alt="Restaurant">
+        </div>
+
+    </div>
+    <!--established since 2014-->
+    <div class="hero">
+
+        <div class="hero-text">
+        <h5>established since 2014</h5>
+        <h1>We've been serving for <span>over 5 years</span> </h1>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea modi est dolorem debitis ipsam aut rerum tempore quo nam iure animi accusantium perspiciatis eaque amet facilis, maxime magni asperiores minima!</p>
+        <a href="#" class="hero-btn">
+                Latest offers
+            </a>
+        </div>
+            <div class="hero-image">
+            <img
+                src="https://tse4.mm.bing.net/th/id/OIP.KhASoYqrywYSRgtuoM_0QwHaE8?r=0&pid=Api&h=220&P=0"
+                alt="Restaurant">
+            </div>
+        </div>
+                
+        </div>
+        <!-- MENU -->
+    <div class="menu">
+
+        <h2 class="section-title">
+            Menu
+        </h2>
+
+        <p class="section-subtitle">
+            Try dishes from our menu
+        </p>
+        <!--Starters-->>
+        <h1 class="category-title">Starters</h1>
+        <br>
+        <div class="menu-container">       
+            <div class="food-card">
+
+                <img
+                    src="https://tse3.mm.bing.net/th/id/OIP.oTYhQBYoVRxesB14v2JzagHaHa?r=0&pid=Api&h=220&P=0"
+                    alt="Chicken 65  ">
+
+                <div class="food-info">
+                    <h3>Chicken 65</h3>
+                    <p>
+                        Crispy, spicy fried chicken pieces tossed with aromatic herbs and spices
+                    </p>
+                    <span class="price">₹299</span>
+                </div>
+
+            </div>
+
+            <div class="food-card">
+
+                <img
+                    src="https://tse2.mm.bing.net/th/id/OIP.R_Qyp_4n2cXST-MsNBtDZAHaE7?r=0&pid=Api&h=220&P=0"
+                    alt="Cheese Corn Balls">
+
+                <div class="food-info">
+                    <h3>Cheese Corn Balls</h3>
+                    <p>
+                        Crunchy golden balls filled with creamy cheese and sweet corn.
+                    </p>
+                    <span class="price">₹249</span>
+                </div>
+
+            </div>
+
+            <div class="food-card">
+
+                <img
+                    src="https://tse1.mm.bing.net/th/id/OIP.XrfKZBClSGZwkWFjPV2apQHaE5?r=0&pid=Api&h=220&P=0"
+                    alt="Chilli Mushroom">
+
+                <div class="food-info">
+                    <h3>Chilli Mushroom</h3>
+                    <p>
+                    Crispy mushrooms tossed in a spicy, tangy Indo-Chinese sauce
+                    </p>
+                    <span class="price">₹199</span>
+                </div>
+
+            </div>
+
+            <div class="food-card">
+
+                <img
+                    src="https://tse4.mm.bing.net/th/id/OIP.EHC4KAUpe8nZgiZsqjwI6AHaHa?r=0&pid=Api&h=220&P=0"
+                    alt="Crispy Potato Wedges">
+
+                <div class="food-info">
+                    <h3>Crispy Potato Wedges</h3>
+                    <p>
+                        Golden, crunchy potato wedges seasoned with flavorful herbs and spices.
+                    </p>
+                    <span class="price">₹299</span>
+                </div>
+
+            </div>
+
+            <div class="food-card">
+
+                <img
+                    src="https://tse1.mm.bing.net/th/id/OIP.brXSG9Ny4qffksTiV3PvdQHaHa?r=0&pid=Api&h=220&P=0"
+                    alt="Chicken Tikka">
+
+                <div class="food-info">
+                    <h3>Chicken Tikka</h3>
+                    <p>
+                        Juicy, marinated chicken pieces grilled with smoky spices and herbs.
+                    </p>
+                    <span class="price">₹299</span>
+                </div>
+
+            </div>
+
+            <div class="food-card">
+
+                <img
+                    src="https://tse1.mm.bing.net/th/id/OIP.buJ3SzXvXKEc_DeJxUFIKwHaHa?r=0&pid=Api&h=220&P=0"
+                    alt="Crispy Corn">
+
+                <div class="food-info">
+                    <h3>Crispy Corn</h3>
+                    <p>
+                    Crunchy fried corn kernels tossed with spicy seasoning and fresh herbs. 
+                    </p>
+                    <span class="price">₹299</span>
+                </div>
+
+            </div>
+
+        </div>
+        <!--Main course-->>
+        <h1 class="category-title">Main Course</h1>
+        <br>
+        <div class="menu-container">
+        
+            <div class="food-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38"
+                    alt="Pizza">
+
+                <div class="food-info">
+                    <h3>Italian Pizza</h3>
+                    <p>
+                        Fresh vegetables, cheese and delicious
+                        Italian-style tomato sauce.
+                    </p>
+                    <span class="price">₹299</span>
+                </div>
+
+            </div>
+
+            <div class="food-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd"
+                    alt="Burger">
+
+                <div class="food-info">
+                    <h3>Classic Burger</h3>
+                    <p>
+                        Juicy burger with fresh vegetables,
+                        cheese and our special sauce.
+                    </p>
+                    <span class="price">₹249</span>
+                </div>
+
+            </div>
+
+            <div class="food-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1547592180-85f173990554"
+                    alt="Salad">
+
+                <div class="food-info">
+                    <h3>Fresh Salad</h3>
+                    <p>
+                        Healthy fresh vegetables with a
+                        delicious homemade dressing.
+                    </p>
+                    <span class="price">₹199</span>
+                </div>
+
+            </div>
+
+            <div class="food-card">
+
+                <img
+                    src="https://tse3.mm.bing.net/th/id/OIP.ItqxWXQMoGZQ4bY3ZagdygHaHa?r=0&pid=Api&h=220&P=0"
+                    alt="Pasta">
+
+                <div class="food-info">
+                    <h3>Pasta</h3>
+                    <p>
+                        Fresh vegetables, cheese and delicious
+                        Italian-style white sauce.
+                    </p>
+                    <span class="price">₹299</span>
+                </div>
+
+            </div>
+
+            <div class="food-card">
+
+                <img
+                    src="https://tse3.mm.bing.net/th/id/OIP.odYdBMMpxdUP3qcX0H9LhAHaHa?r=0&pid=Api&h=220&P=0"
+                    alt="Noodles">
+
+                <div class="food-info">
+                    <h3>Chinese Noodles</h3>
+                    <p>
+                        Fresh vegetables, cheese and delicious
+                        chinese-style pan fried style.
+                    </p>
+                    <span class="price">₹299</span>
+                </div>
+
+            </div>
+
+            <div class="food-card">
+
+                <img
+                    src="https://tse4.mm.bing.net/th/id/OIP.dEyEvqfGH62TNJfiOrLy2gHaE8?r=0&pid=Api&h=220&P=0"
+                    alt="Sandwich">
+
+                <div class="food-info">
+                    <h3>Sandwich</h3>
+                    <p>
+                        Fresh vegetables, cheese and delicious
+                        Moyo and bread.
+                    </p>
+                    <span class="price">₹299</span>
+                </div>
+
+            </div>
+
+        </div>
+        <!--Soups-->
+         <h1 class="category-title">Soups</h1>
+        <br>
+        <div class="menu-container">
+       
+            <div class="food-card">
+
+                <img
+                    src="https://tse4.mm.bing.net/th/id/OIP.OceJWJQb7ASNEDy5QSc5UAHaHa?r=0&pid=Api&h=220&P=0"
+                    alt="Thick tomato soup">
+
+                <div class="food-info">
+                    <h3>Thick tomato soup</h3>
+                    <p>
+                        A rich, smooth soup with a delicious blend of ripe tomatoes and cream.
+                    </p>
+                    <span class="price">₹299</span>
+                </div>
+
+            </div>
+
+            <div class="food-card">
+
+                <img
+                    src="https://tse3.mm.bing.net/th/id/OIP.poxag5F-SYZeMqPPtL_P5wHaJ4?r=0&pid=Api&h=220&P=0"
+                    alt="Sweet Corn Soup">
+
+                <div class="food-info">
+                    <h3>Sweet Corn Soup</h3>
+                    <p>
+                        A mildly sweet and comforting soup filled with tender corn and vegetables.
+                    </p>
+                    <span class="price">₹249</span>
+                </div>
+
+            </div>
+
+            <div class="food-card">
+
+                <img
+                    src="https://tse2.mm.bing.net/th/id/OIP.QpKcnhoYftI3OCBziYrfsQHaHa?r=0&pid=Api&h=220&P=0"
+                    alt="Chicken Manchow Soup">
+
+                <div class="food-info">
+                    <h3>Chicken Manchow Soup</h3>
+                    <p>
+                        A spicy, flavorful soup with chicken, vegetables, and crunchy toppings.
+                    </p>
+                    <span class="price">₹199</span>
+                </div>
+
+            </div>
+
+            <div class="food-card">
+
+                <img
+                    src="https://tse2.mm.bing.net/th/id/OIP.CjLSBBrW1sL4jzIOjFqYewHaE8?r=0&pid=Api&h=220&P=0"
+                    alt="Cream of Mushroom Soup">
+
+                <div class="food-info">
+                    <h3>Cream of Mushroom Soup</h3>
+                    <p>
+                        A creamy, savory soup packed with the earthy flavor of mushrooms.
+                    </p>
+                    <span class="price">₹299</span>
+                </div>
+
+            </div>
+
+            <div class="food-card">
+
+                <img
+                    src="https://tse1.mm.bing.net/th/id/OIP.BRTr77UjhJBrp03jYX7oQwHaLH?r=0&pid=Api&h=220&P=0"
+                    alt="Hot & Sour Vegetable Soup">
+
+                <div class="food-info">
+                    <h3>Hot & Sour Vegetable Soup</h3>
+                    <p>
+                        A tangy and spicy soup loaded with fresh vegetables.
+                    </p>
+                    <span class="price">₹299</span>
+                </div>
+
+            </div>
+
+            <div class="food-card">
+
+                <img
+                    src="https://tse1.mm.bing.net/th/id/OIP.c13GGDydwvNbktvStDnUegHaHa?r=0&pid=Api&h=220&P=0"
+                    alt="Tom Yum Soup">
+
+                <div class="food-info">
+                    <h3>Tom Yum Soup</h3>
+                    <p>
+                        A flavorful Thai soup with a perfect balance of spicy, sour, and aromatic flavors.
+                    </p>
+                    <span class="price">₹299</span>
+                </div>
+
+            </div>
+
+        </div>
+        <!--Desserts-->
+        <h1 class="category-title">Desserts</h1>
+        <br>
+        <div class="menu-container">
+        
+            <div class="food-card">
+
+                <img
+                    src="https://tse3.mm.bing.net/th/id/OIP.od3q_UmquZbhva2lsvLFjgHaJ4?r=0&pid=Api&h=220&P=0"
+                    alt="Tiramisu">
+
+                <div class="food-info">
+                    <h3>Tiramisu</h3>
+                    <p>
+                    Creamy mascarpone layered with coffee-soaked cake and a rich cocoa finish. 
+                    </p>
+                    <span class="price">₹299</span>
+                </div>
+
+            </div>
+
+            <div class="food-card">
+
+                <img
+                    src="https://tse4.mm.bing.net/th/id/OIP.sgOh7kYMynhy6nCbzs3_5wHaHa?r=0&pid=Api&h=220&P=0"
+                    alt="Dubai Chocolate">
+
+                <div class="food-info">
+                    <h3>Dubai Chocolate</h3>
+                    <p>
+                    Decadent chocolate filled with crunchy pistachio and crispy kunafa.
+                    </p>
+                    <span class="price">₹249</span>
+                </div>
+
+            </div>
+
+            <div class="food-card">
+
+                <img
+                    src="https://tse4.mm.bing.net/th/id/OIP.9OPeUTHsiFyV8jpvKErStQHaE8?r=0&pid=Api&h=220&P=0"
+                    alt="Cheesecake">
+
+                <div class="food-info">
+                    <h3>Cheesecake</h3>
+                    <p>
+                    Smooth, creamy and indulgent with a buttery biscuit base and endless flavor options.
+                    </p>
+                    <span class="price">₹199</span>
+                </div>
+
+            </div>
+
+            <div class="food-card">
+
+                <img
+                    src="https://tse1.mm.bing.net/th/id/OIP.oql-X2KQrGcNxCMc3MjntgHaFj?r=0&pid=Api&h=220&P=0"
+                    alt="Mochi">
+
+                <div class="food-info">
+                    <h3>Mochi</h3>
+                    <p>
+                    Soft, chewy rice-cake bites wrapped around sweet fillings like ice cream or chocolate.
+                    </p>
+                    <span class="price">₹299</span>
+                </div>
+
+            </div>
+
+            <div class="food-card">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHrDXiSP_cTjdRAY4oCFU4BKrqS5KTHJn9Z8U4G3cZVg&s=10"
+                    alt=""Crème Brûlée>
+
+                <div class="food-info">
+                    <h3>Crème Brûlée</h3>
+                    <p>
+                    Silky vanilla custard topped with a thin, satisfying layer of caramelized sugar.
+                    </p>
+                    <span class="price">₹299</span>
+                </div>
+
+            </div>
+
+            <div class="food-card">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT92KMKxNx6NzEOd8U_ynkr9y3ZL3qvmt7IXPvczdceYw&s=10"
+                    alt="Croffle">
+
+                <div class="food-info">
+                    <h3>Croffle</h3>
+                    <p>
+                    A crispy, buttery croissant-waffle hybrid served with toppings like chocolate, ice cream or fruit
+                    </p>
+                    <span class="price">₹299</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- FEATURES -->
+    <div class="features">
+
+        <h2 class="section-title">
+            Why Choose Us?
+        </h2>
+
+        <p class="section-subtitle">
+            Everything you need for a perfect dining experience.
+        </p>
+
+        <div class="feature-container">
+
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-bowl-food"></i></div>
+                <h3>Fresh Ingredients</h3>
+                <p>
+                    We use fresh and high-quality ingredients
+                    in every dish we prepare.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-kitchen-set"></i></div>
+                <h3>Expert Chefs</h3>
+                <p>
+                    Our experienced chefs create delicious
+                    meals with passion and creativity.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-truck"></i></div>
+                <h3>Fast Delivery</h3>
+                <p>
+                    Enjoy your favorite meals delivered
+                    quickly and safely to your doorstep.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    
+
+
+    <!-- ABOUT -->
+    <section class="about">
+
+        <div class="about-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1552566626-52f8b828add9"
+                alt="Restaurant interior">
+
+        </div>
+
+        <div class="about-text">
+
+            <h2>
+                A place made for food lovers.
+            </h2>
+
+            <p>
+                At TastyBite, we believe that great food brings
+                people together. Our restaurant combines fresh
+                ingredients, talented chefs and a warm atmosphere.
+            </p>
+
+            <p>
+                Whether you're having dinner with family,
+                meeting friends or celebrating a special occasion,
+                we are here to make your experience memorable.
+            </p>
+
+            <a href="#" class="about-btn">
+                Learn More
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- TESTIMONIAL -->
+    <section class="testimonial">
+
+        <h2 class="section-title">
+            What Our Customers Say
+        </h2>
+
+        <p class="section-subtitle">
+            Our customers love dining with us.
+        </p>
+
+        <div class="testimonial-box">
+
+            <p>
+                "The food was absolutely delicious and the
+                service was amazing. The atmosphere was also
+                beautiful. I will definitely visit again!"
+            </p>
+
+            <div class="customer">
+                — Aashritha Gedda
+            </div>
+
+        </div>
+
+        <div class="testimonial-box">
+
+            <p>
+                "Great place to enjoy a meal with friends and family. The atmosphere was lovely, the food was delicious, and the staff were very welcoming. Had a really good experience!"
+            </p>
+
+            <div class="customer">
+                — Anjani Kruthi
+            </div>
+
+        </div>
+
+        <div class="testimonial-box">
+
+            <p>
+                "The food was absolutely delicious, and the portions were generous. The restaurant had a cozy atmosphere, and the staff were very polite and attentive. A great place for a relaxing meal!"
+            </p>
+
+            <div class="customer">
+                — Laxmi Prasanna
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta">
+
+        <h2>
+            Ready for a delicious meal?
+        </h2>
+
+        <p>
+            Visit us today and enjoy freshly prepared food.
+        </p>
+
+        <a href="#" class="cta-btn">
+            Order Now
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-column">
+
+                <h3>TastyBite</h3>
+
+                <p>
+                    Delicious food made with love.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Menu</a>
+                <a href="#">Contact</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Contact</h3>
+
+                <p> Srikakulam, Andhra Pradesh</p>
+                <p>+91 98765 43210</p>
+                <p>hello@tastybite.com</p>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 TastyBite. All rights reserved.
+        </div>
+
+    </footer>
+
+</body>
+</html>
